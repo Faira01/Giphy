@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    border:black 1px;
+}
+
+img{
+    padding: 5%;
+}
+
+#search{
+    background-color: purple;
+    color: white;
+}
