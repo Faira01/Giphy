@@ -18,9 +18,8 @@ removeButton.addEventListener('click',function(e){
 
 
 async function getGIF(){
-    const res= await axios.get('http://api.giphy.com/v1/gifs/search',{params: {api_key:APIkey,q:searchBar.value, limit:1}})
-    // console.log(res.data.data[0])
-    let url=res.data.data[0].url;
+    const res= await axios.get('http://api.giphy.com/v1/gifs/search',{params: {api_key:APIkey,q:searchBar.value}})
+    let url=res.data.data[Math.floor((Math.random()*49))].images.fixed_height.url;
     const newIMG= document.createElement('img');
     newIMG.src=url;
     document.body.append(newIMG)
